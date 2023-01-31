@@ -1,13 +1,13 @@
 <template>
-    <button  @click="onClick()" :style="{background: color}" class="btn" >{{ text }}</button>
+    <button  @click="onClick()" :style="{background: color}" class="btn" >{{ showAddTask ? 'Close' : 'Add Task'}}</button>
 </template>
 
 <script>
 export default {
     name: 'Button',
     props: {
-        text: String,
-        color: String
+        showAddTask: {type: Boolean},
+        color: {type:String}
     },
     methods: {
         onClick() {
